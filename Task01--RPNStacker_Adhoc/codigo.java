@@ -12,32 +12,26 @@ public class codigo {
         while(sc.hasNextLine()) {
             String c = sc.nextLine();
             System.out.println(stack);
+            String a = stack.pop();
+            String b = stack.pop();
 
             if(c.equals("/") || c.equals("+") || c.equals("-") || c.equals("*")){
                 if(c.equals("+")){
-                    String a = stack.pop();
-                    String b = stack.pop();
                     double d = Double.parseDouble(a) + Double.parseDouble(b);
                     String e = String.valueOf(d);
                     stack.push(e);
                 }
                 else if(c.equals("-")){
-                    String a = stack.pop();
-                    String b = stack.pop();
                     double d = Double.parseDouble(b) - Double.parseDouble(a);
                     String e = String.valueOf(d);
                     stack.push(e);
                 }
                 else if(c.equals("*")){
-                    String a = stack.pop();
-                    String b = stack.pop();
                     double d = Double.parseDouble(a) * Double.parseDouble(b);
                     String e = String.valueOf(d);
                     stack.push(e);
                 }
                 else if(c.equals("/")){
-                    String a = stack.pop();
-                    String b = stack.pop();
                     double d = Double.parseDouble(b) / Double.parseDouble(a);
                     if(Math.abs(d)<Double.POSITIVE_INFINITY) {
                         String e = String.valueOf(d);
